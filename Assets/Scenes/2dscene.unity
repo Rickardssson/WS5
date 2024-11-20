@@ -1365,17 +1365,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 4, y: 0, z: 0}
   activeOnStart: 1
---- !u!114 &736431307 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6165800779389348895, guid: 7b1beb67a8cab604997fb8a99053f770, type: 3}
-  m_PrefabInstance: {fileID: 1484217192}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7113c0479fa1d1488099e5de7fcbde9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &736431309 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6949774532063807095, guid: 7b1beb67a8cab604997fb8a99053f770, type: 3}
@@ -5048,10 +5037,6 @@ GameObject:
   - component: {fileID: 1613433742}
   - component: {fileID: 1613433744}
   - component: {fileID: 1613433741}
-  - component: {fileID: 1613433751}
-  - component: {fileID: 1613433750}
-  - component: {fileID: 1613433746}
-  - component: {fileID: 1613433745}
   - component: {fileID: 1613433749}
   - component: {fileID: 1613433748}
   - component: {fileID: 1613433747}
@@ -5179,7 +5164,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1613433746}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlatformerMovement, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
@@ -5191,7 +5176,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1613433745}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InstantiateOnEvent, Assembly-CSharp
         m_MethodName: InstantiatePrefab
         m_Mode: 1
@@ -5203,7 +5188,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1613433746}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlatformerMovement, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
@@ -5227,7 +5212,7 @@ MonoBehaviour:
     m_ActionName: Player/Fire[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1613433746}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlatformerMovement, Assembly-CSharp
         m_MethodName: OnJump
         m_Mode: 0
@@ -5298,40 +5283,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1613433745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1613433740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7922fd2394d5fd341b3bfc5ed3599c7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToInstantiate: {fileID: 1805229519}
-  instantiationTransform: {fileID: 0}
-  instanceLifeTime: 2
---- !u!114 &1613433746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1613433740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: accefe20f3271194480a1dc575e1ced8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSpeed: 10
-  jumpForce: 10
-  spriteRenderer: {fileID: 0}
-  onAction2:
-    m_PersistentCalls:
-      m_Calls: []
-  animator: {fileID: 0}
 --- !u!70 &1613433747
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -5429,82 +5380,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &1613433750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1613433740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb5c63a02e7a6664d9ea5ad8b2d52ea4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 10
-  minHealth: 0
-  invincible: 0
-  safeTime: 3
-  OnDamaged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1613433750}
-        m_TargetAssemblyTypeName: Health, Assembly-CSharp
-        m_MethodName: TakeDamage
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 1
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 736431307}
-        m_TargetAssemblyTypeName: AudioPlay, Assembly-CSharp
-        m_MethodName: PlayAudio
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnExitSafeTime:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: cf9279e3fac43524095295ddc32e977c, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnHealed:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDie:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1613433751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1613433740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 188c912953295cf47bab295a1eff038c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1704690541
 GameObject:
   m_ObjectHideFlags: 0
@@ -5727,7 +5602,7 @@ MonoBehaviour:
   onTriggerEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1613433750}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Health, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 4
@@ -5830,11 +5705,6 @@ MonoBehaviour:
   OnDie:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &1805229519 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8723411537065721104, guid: e80c8247ccbf4984cbc70ca1a82cc1b2, type: 3}
-  m_PrefabInstance: {fileID: 1381017564}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1805229524 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3435642412393559132, guid: e80c8247ccbf4984cbc70ca1a82cc1b2, type: 3}
