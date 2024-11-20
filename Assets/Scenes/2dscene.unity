@@ -5035,6 +5035,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1613433743}
   - component: {fileID: 1613433742}
+  - component: {fileID: 1613433750}
   - component: {fileID: 1613433744}
   - component: {fileID: 1613433741}
   - component: {fileID: 1613433749}
@@ -5164,7 +5165,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1613433750}
         m_TargetAssemblyTypeName: PlatformerMovement, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
@@ -5176,9 +5177,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1613433750}
         m_TargetAssemblyTypeName: InstantiateOnEvent, Assembly-CSharp
-        m_MethodName: InstantiatePrefab
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5212,7 +5213,7 @@ MonoBehaviour:
     m_ActionName: Player/Fire[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1613433750}
         m_TargetAssemblyTypeName: PlatformerMovement, Assembly-CSharp
         m_MethodName: OnJump
         m_Mode: 0
@@ -5380,6 +5381,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &1613433750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613433740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0824310711881084380bc92553eb9b52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 10
+  jumpForce: 10
+  spriteRenderer: {fileID: 0}
+  onAction2:
+    m_PersistentCalls:
+      m_Calls: []
+  animator: {fileID: 0}
 --- !u!1 &1704690541
 GameObject:
   m_ObjectHideFlags: 0
@@ -5412,25 +5432,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efa969361c5c9d749ae2bc8c67a24d31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagToActivate: Bounds
-  onTriggerEnter:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 727512809}
-        m_TargetAssemblyTypeName: ContinuousMovement, Assembly-CSharp
-        m_MethodName: InvertVelocity
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onTriggerExit:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!212 &1704690544
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5598,61 +5599,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efa969361c5c9d749ae2bc8c67a24d31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagToActivate: Player
-  onTriggerEnter:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Health, Assembly-CSharp
-        m_MethodName: TakeDamage
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 1
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1771424823}
-        m_TargetAssemblyTypeName: Health, Assembly-CSharp
-        m_MethodName: TakeDamage
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 1
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 925535563}
-        m_TargetAssemblyTypeName: UnityEventAfterTimer, Assembly-CSharp
-        m_MethodName: StartTimer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 173794644}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onTriggerExit:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1771424823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7204,25 +7150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efa969361c5c9d749ae2bc8c67a24d31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagToActivate: Bounds
-  onTriggerEnter:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 727512809}
-        m_TargetAssemblyTypeName: ContinuousMovement, Assembly-CSharp
-        m_MethodName: InvertVelocity
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onTriggerExit:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!212 &1992038745
 SpriteRenderer:
   m_ObjectHideFlags: 0
